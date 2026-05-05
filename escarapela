@@ -1,0 +1,155 @@
+
+void setup() {
+  size(900, 678);
+}
+
+
+void draw(){
+  if(mousePressed){background(#FFFFFF);}
+  else            {background(#0A0000);}
+  escarapela(width, height, mouseX, mouseY);
+}
+
+void escarapela(float w, float h, float mx, float my){
+    
+  
+  
+  //circle(x, y, radio);
+  
+ 
+  if(mx<w*3/4 && mx>w*1/4)
+  {
+
+      stroke(#273876);                //Color del contorno. (Azul oscuro).
+      strokeWeight(h/150);            //Grosor del contorno.
+      fill(#FFFFFF);                  //Color del relleno.  (Blanco).
+      circle(mx, h-my, w/2);
+  
+    
+      stroke(#4F98F5);
+      strokeWeight(h/100);
+      fill(#4F98F5);
+      circle(mx, h-my, w/2.2);
+ 
+     
+      stroke(#FFFFFF);
+      strokeWeight(h/100);
+      fill(#4F98F5);
+      circle(mx, h-my, w/2.9);
+ 
+ 
+      stroke(#FFFFFF);
+      strokeWeight(h/80);
+      fill(#FFFFFF);
+      circle(mx, h-my, w/3.5);
+ 
+      //Circulo amarillo.
+      stroke(#FAF023);
+      fill(#FAF023);
+      circle(mx, h-my, w/9);
+      }
+
+  else{
+  
+    if(mx<w*1/4)
+    {
+     
+      stroke(#273876);                
+      strokeWeight(h/150);            
+      fill(#FFFFFF);                  
+      circle(w*1/4, h-my, w/2);
+  
+  
+      stroke(#4F98F5);
+      strokeWeight(h/100);
+      fill(#4F98F5);
+      circle(w*1/4, h-my, w/2.2);
+ 
+    
+      stroke(#FFFFFF);
+      strokeWeight(h/100);
+      fill(#4F98F5);
+      circle(w*1/4, h-my, w/2.9);
+ 
+
+      stroke(#FFFFFF);
+      strokeWeight(h/80);
+      fill(#FFFFFF);
+      circle(w*1/4, h-my, w/3.5);
+ 
+ 
+     
+      if(mx>(w*1/4 - w/9))
+      {
+         
+          if((mx + w/9) > (w + w/3.5))
+          {
+       
+          stroke(#FAF023);
+          fill(#FAF023);
+          circle(w*1/4 + w/3.5, h-my, w/9);
+          }
+          
+ 
+          {
+        
+          stroke(#FAF023);
+          fill(#FAF023);
+          circle(mx + w/9, h-my, w/9);
+          }
+      }
+      else{stroke(#FAF023);   fill(#FAF023);    circle(w*1/4, h-my, w/9);}
+    }
+     
+    
+      else
+      {
+  
+      stroke(#273876);                
+      strokeWeight(h/150);            
+      fill(#FFFFFF);                  
+      circle(w*3/4, h-my, w/2);
+  
+     
+      stroke(#4F98F5);
+      strokeWeight(h/100);
+      fill(#4F98F5);
+      circle(w*3/4, h-my, w/2.2);
+ 
+  
+      stroke(#FFFFFF);
+      strokeWeight(h/100);
+      fill(#4F98F5);
+      circle(w*3/4, h-my, w/2.9);
+ 
+      
+      stroke(#FFFFFF);
+      strokeWeight(h/80);
+      fill(#FFFFFF);
+      circle(w*3/4, h-my, w/3.5);
+
+     
+      if(mx<(w*3/4 + w/9))
+      {
+         
+          if((mx + w/9) > (w + w/3.5))
+          {
+       
+          stroke(#FAF023);
+          fill(#FAF023);
+          circle(w*3/4 - w/3.5 + w/8, h-my, w/9);
+          }
+          
+          else
+          {
+          //Circulo amarillo.
+          stroke(#FAF023);
+          fill(#FAF023);
+          circle(mx - w/9, h-my, w/9);
+          }
+
+      }
+      else{stroke(#FAF023);   fill(#FAF023);   circle(w*3/4, h-my, w/9);}
+     }
+  }
+}
