@@ -1,1 +1,29 @@
 
+void setup(){
+  size(1000, 500);
+}
+
+void draw(){
+   dibujarbandera();
+}
+
+void dibujarbandera()
+{
+   int h=height, w=width;
+
+   stroke(#000000);
+   fill(#000000);
+   rect(0, 0, w, h);
+   
+
+   stroke(#FF0000);
+   fill(#FF0000);
+   
+   rect(0, 0, w, h/4.5);       
+   rect(0, h-h/4.5, w, h/4.5); 
+   
+
+   stroke(#00FF00);
+   fill(#00FF00);
+   circle(w/2, h/2, h/4.5);
+}
